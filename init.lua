@@ -38,15 +38,17 @@ if not hspoon_list then
     hspoon_list = {
         "AClock",
         "BingDaily",
-        "CircleClock",
+        -- "CircleClock",
         "ClipShow",
         "CountDown",
-        "HCalendar",
-        "HSaria2",
+        "Calendar",
+        -- "HCalendar",
+        -- "HSaria2",
         "HSearch",
-        "SpeedMenu",
+        -- "SpeedMenu",
         "WinWin",
-        "FnMate",
+        -- "FnMate",
+        "KSheet"
     }
 end
 
@@ -76,11 +78,12 @@ cmodal:bind('', 'Q', 'Deactivate appM', function() spoon.ModalMgr:deactivate({"a
 cmodal:bind('', 'tab', 'Toggle Cheatsheet', function() spoon.ModalMgr:toggleCheatsheet() end)
 if not hsapp_list then
     hsapp_list = {
-        {key = 'f', name = 'Finder'},
-        {key = 's', name = 'Safari'},
-        {key = 't', name = 'Terminal'},
-        {key = 'v', id = 'com.apple.ActivityMonitor'},
-        {key = 'y', id = 'com.apple.systempreferences'},
+        {key = 'f', name = 'OmniFocus'},
+        {key = 'g', name = 'Google Chrome'},
+        {key = 't', name = 'iTerm'},
+        {key = 'c', name = 'Visual Studio Code'},
+        {key = 'w', name = 'Wechat'},
+        {key = 'y', name = 'YoudaoDict'}
     }
 end
 for _, v in ipairs(hsapp_list) do
