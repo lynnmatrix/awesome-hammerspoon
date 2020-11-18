@@ -1,3 +1,6 @@
+
+require("move_space")
+
 hs.hotkey.alertDuration = 0
 hs.hints.showTitleThresh = 0
 hs.window.animationDuration = 0
@@ -83,7 +86,8 @@ if not hsapp_list then
         {key = 't', name = 'iTerm'},
         {key = 'c', name = 'Visual Studio Code'},
         {key = 'w', name = 'Wechat'},
-        {key = 'y', name = 'YoudaoDict'}
+        {key = 'y', name = 'YoudaoDict'},
+        {key = 'm', name = 'Mail'}
     }
 end
 for _, v in ipairs(hsapp_list) do
@@ -294,6 +298,8 @@ if spoon.WinWin then
     cmodal:bind('shift', 'J', 'Move Downward', function() spoon.WinWin:stepResize("down") end, nil, function() spoon.WinWin:stepResize("down") end)
     cmodal:bind('', 'left', 'Move to Left Monitor', function() spoon.WinWin:stash() spoon.WinWin:moveToScreen("left") end)
     cmodal:bind('', 'right', 'Move to Right Monitor', function() spoon.WinWin:stash() spoon.WinWin:moveToScreen("right") end)
+    cmodal:bind('shift', 'right', 'Move to right desktop', function() moveWindowOneSpace("right", true) end)
+    cmodal:bind('shift', 'left', 'Move to left desktop', function() moveWindowOneSpace("left", true) end)
     cmodal:bind('', 'up', 'Move to Above Monitor', function() spoon.WinWin:stash() spoon.WinWin:moveToScreen("up") end)
     cmodal:bind('', 'down', 'Move to Below Monitor', function() spoon.WinWin:stash() spoon.WinWin:moveToScreen("down") end)
     cmodal:bind('', 'space', 'Move to Next Monitor', function() spoon.WinWin:stash() spoon.WinWin:moveToScreen("next") end)
